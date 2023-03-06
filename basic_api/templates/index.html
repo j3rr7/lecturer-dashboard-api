@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block extra_head %}
+<style>
+    .navLink:hover {
+        transform: scale(1.2)
+    }
+
+    .navLink {
+        transition: all 200ms linear;
+        padding: 8px;
+        width: 72px;
+        height: 72px;
+        border-radius: 8px;
+        border: 1px solid #c1d9ee;
+        {#background: linear-gradient(225deg, #d3eeff, #b1c8e0);#}
+        {#box-shadow: -5px 5px 16px #a5bad1, 5px -5px 16px #ddedff#}
+    }
+
+    .navLink i {
+        font-size: 2em
+    }
+
+    @media screen and (max-width:425px) {
+        .navLink i {
+            font-size: 1.5em
+        }
+
+        .navLink {
+            width: 48px;
+            height: 48px;
+            line-height: 32px
+        }
+
+        .navLabel {
+            display: none
+        }
+    }
+
+      .navLink a {
+        text-decoration: none;
+      }
+
+      .smallContainer {
+        max-width: 720px;
+        margin: 0 auto;
+        background: var(--bg-color-nav-primary);
+      }
+
+      .navLabel {
+        font-size: 12px
+      }
+
+      .navLinkActive * {
+        color: #fff !important
+      }
+
+      .navLinkActive {
+        background: var(--bg-color-nav-active);
+      }
+</style>
+{% endblock %}
+
+{% block content %}
+    <div class="position-fixed text-uppercase mb-2 p-2 start-0 text-center bottom-0 w-100" role=navigation>
+      <div class="smallContainer p-3 shadow-lg rounded">
+        <div class="d-flex align-items-center justify-content-around">
+          <div class="navLink navLinkActive">
+            <a href=#>
+              <div>
+                <i class="fas fa-home"></i>
+              </div>
+              <div class=navLabel>Home</div>
+            </a>
+          </div>
+          <div class="navLink ">
+            <a href=#>
+              <div>
+                <i class="fas fa-home"></i>
+              </div>
+              <div class=navLabel>Home</div>
+            </a>
+          </div>
+            <div class="navLink ">
+            <a href=#>
+              <div>
+                <i class="fas fa-home"></i>
+              </div>
+              <div class=navLabel>Home</div>
+            </a>
+          </div>
+            <div class="navLink ">
+            <a href=#>
+              <div>
+                <i class="fas fa-home"></i>
+              </div>
+              <div class=navLabel>Home</div>
+            </a>
+          </div>
+            <div class="navLink ">
+            <a href=#>
+              <div>
+                <i class="fas fa-home"></i>
+              </div>
+              <div class=navLabel>Home</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

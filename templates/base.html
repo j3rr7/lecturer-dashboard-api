@@ -1,0 +1,39 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'fontawesomefree/css/fontawesome.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'fontawesomefree/css/brands.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'fontawesomefree/css/solid.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'fontawesomefree/css/duo.css' %}" type="text/css" />
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+        :root {
+            --bg-color-nav-primary: rgba(207, 207, 207, 0.81);
+            --bg-color-nav-active: rgba(255, 255, 255, 0.81);
+        }
+    </style>
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    <header>
+        {% block header %}{% endblock %}
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        {% block footer %}{% endblock %}
+    </footer>
+</body>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+{% block script_js %}{% endblock %}
+</html>
